@@ -14,13 +14,15 @@ This generator creates source code for creating an Oracle Object Type (for furth
 - the generator uses unique indexes on a table to create the type's constructors, so at least one is needed
 - to support DML operations a sequence to generate the primary key is needed. By default, the sequence's name has to be <<TABLE_NAME>>_SEQ, but you can modify the generators' package specification (v_sequence_prefix  and v_sequence_suffix) to match your personal needs
 - to lock rows, you need (per default) the following columns in your table (like the sequence pre- and suffix, also the column names can be modified in the package specification):
+
+```
    - CREATED_USER    VARCHAR2(100)
    - CREATED_DATE    DATE
    - CHANGED_USER    VARCHAR2(100)
    - CHANGED_DATE    DATE
    - CHANGED_COUNTER NUMBER(12)
    - DELETED_DATE    DATE
- 
+```
  
 ## <a name="installation"></a> 3. Installation
  
